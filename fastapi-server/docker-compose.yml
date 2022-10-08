@@ -3,7 +3,7 @@ version: "3"
 services:
   fastapi-server-poc:
     build: .
-    image: hub.thefalcon.site/fastapi-server-poc:v1
+    image: fastapi-server-poc:v1
     ports:
       - "8080:8080"
     env_file:
