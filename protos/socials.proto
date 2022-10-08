@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+
+package books;
+
+
+message Socials{
+    int32 id = 1;
+    string name = 2;
+    string twitter = 3;
+}
+
+message SocialsRequestById {
+    int32 id = 1;
+}
+
+service SocialsRequest{
+    rpc GetSocialById (SocialsRequestById) returns (Socials) {};
+}
+

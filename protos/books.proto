@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+
+package books;
+
+
+message Books{
+    int32 id = 1;
+    string title = 2;
+    string author = 3;
+    string description = 4;
+    string publisher = 5;
+}
+
+message BooksRequestById {
+    int32 id = 1;
+}
+
+service BooksRequest{
+    rpc GetBookById (BooksRequestById) returns (Books) {};
+}
+
