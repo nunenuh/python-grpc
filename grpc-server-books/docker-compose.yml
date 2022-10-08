@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  grpc-books-server-poc:
+    build: .
+    image: hub.thefalcon.site/grpc-books-server-poc:v1
+    ports:
+      - "5058:5058"
+    env_file:
+      - .env
