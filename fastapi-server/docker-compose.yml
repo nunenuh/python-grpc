@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  fastapi-server-poc:
+    build: .
+    image: hub.thefalcon.site/fastapi-server-poc:v1
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      - DEBUG=1
+      - BOOKS_GRPC_ADDRESS='localhost:5058'
+      - SOCIALS_GRPC_ADDRESS='localhost:5059'
+      
+

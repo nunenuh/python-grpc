@@ -1,0 +1,11 @@
+# machine learning
+onnx==1.10.1
+onnxruntime==1.9.0
+torch==1.9.0
+torchvision==0.10.0
+pytorch-lightning==1.4.8
+opencv-python==4.5.4.58
+opencv-python-headless==4.5.4.58
+scikit-image==0.18.3
+Shapely==1.8.0
+

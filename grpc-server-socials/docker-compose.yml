@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  grpc-socials-server:
+    build: .
+    image: hub.thefalcon.site/grpc-socials-server-poc:v1
+    ports:
+      - "5059:5059"
+    env_file:
+      - .env
