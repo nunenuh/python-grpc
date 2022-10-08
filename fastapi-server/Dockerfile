@@ -1,4 +1,4 @@
-FROM nunenuh/puml:python3.7-prod
+FROM bitnami/python:3.8
 
 ENV PYTHONUNBUFFERED 1
 
@@ -9,11 +9,11 @@ RUN apt-get update && apt-get install git -y && \
     apt-get install libgl1 libgl1-mesa-glx libglib2.0-0 libsm6 libxrender1 libxext6 -y 
 
 COPY ./require/fastapi.txt /tmp/fastapi.txt
-COPY ./require/ml.txt /tmp/ml.txt
+# COPY ./require/ml.txt /tmp/ml.txt
 
 RUN pip install --upgrade pip && \
-    pip install -r /tmp/fastapi.txt && \
-    pip install -r /tmp/ml.txt
+    pip install -r /tmp/fastapi.txt
+    # pip install -r /tmp/ml.txt
 
 COPY . ./
 ENV PYTHONPATH app

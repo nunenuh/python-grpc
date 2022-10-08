@@ -25,5 +25,5 @@ logging.basicConfig(
 )
 logger.configure(handlers=[{"sink": sys.stderr, "level": LOGGING_LEVEL}])
 
-MODEL_PATH = config("MODEL_PATH", default="./ml/model/")
-MODEL_NAME = config("MODEL_NAME", default="model.pkl")
+BOOKS_GRPC_ADDRESS = config("BOOKS_GRPC_ADDRESS", default="localhost:50051")
+SOCIALS_GRPC_ADDRESS = config("SOCIALS_GRPC_ADDRESS", default="localhost:50052")

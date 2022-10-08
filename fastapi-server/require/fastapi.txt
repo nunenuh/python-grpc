@@ -1,5 +1,5 @@
 # unicon gunicorn
-uvicorn==0.11.3
+uvicorn==0.13.1
 gunicorn==20.0.4
 
 # fastapi componenst
@@ -28,3 +28,8 @@ flake8==3.7.9
 pytest==5.4.1
 sqlalchemy-stubs==0.3
 pytest-cov==2.8.1
+joblib==1.2.0
+loguru==0.6.0
+
+grpcio==1.49.1
+grpcio-tools==1.49.1
